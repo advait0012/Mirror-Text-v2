@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100lvh;
+  width: 100lvw;
+  background-color: #eee;
+  color: #222;
+  font-family: "oswald";
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rev {
+  color: red;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+h1::after {
+  content: "";
+  background-image: url("./assets/arrows3.png");
+  position: absolute;
+  top: 27%;
+  bottom: 0;
+  left: 20%;
+  right: 0;
+  height: 100px;
+  width: 100px;
+  background-size: contain;
+}
+
+
+
+h5 {
+  margin-bottom: 50px;
+  font-size: 1.6rem;
+  /* margin-left: -100px; */
+  font-weight: 300;
+}
+
+input {
+  height: 50px;
+  width: 400px;
+  margin-right: 70px;
+  padding: 30px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  border: none;
+  box-shadow: 5px 5px 0px #000;
+  outline: none;
+}
+
+.reverseBtn {
+  background-image: url("./assets/arrows-circle.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 57px;
+  width: 57px;
+  border-radius: 0.5rem;
+  transition: 0.5s ease;
+  border: 1px solid black;
+  outline: none;
+  &:hover {
+    background-image: url("./assets/arrows-circle.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: red;
+    transform: scale(1.1)
+  }
+}
+
+.copyToClipboard{
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 0.5rem;
+  margin-left: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  transition: transform 0.4s ease ;
+  &:hover {
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: red;
+    transform: scale(1.1) ;
+  }
+  &:active{
+    background-color: rgb(255, 76, 76);
+  }
+}
+
+.feedback-message {
+  display: none;
+  position: absolute;
+  top: 35rem;
+  bottom: 0;
+  left: 45rem;
+  right: 0;
+}
+
+.error-message{
+  display: none;
+  position: absolute;
+  top: 35rem;
+  bottom: 0;
+  left: 38rem;
+  right: 0;
+}
+
+
+
+@media screen and (max-width:960px) {
+  h1:after {
+    display: none;
+  }  
+}
+
+@media screen and (max-width: 750px) {
+  h1 {
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+  h5{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  input{
+    width: 20rem;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  h5{
+    font-size: 1rem;
+    text-align: center;
+  }
+  input{
+    width: 13rem;
+  }
+}
